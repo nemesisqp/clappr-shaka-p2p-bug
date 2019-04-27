@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" minBufferTime="PT1.500S" type="static" mediaPresentationDuration="PT1H23M22.238S" maxSegmentDuration="PT0H0M3.003S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011,http://dashif.org/guidelines/dash264">
+    <Period duration="PT1H23M22.238S">
+        <AdaptationSet segmentAlignment="true" maxWidth="1904" maxHeight="1072" maxFrameRate="11988/500" par="16:9" lang="und" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+            <Representation id="2260235810885633v" mimeType="video/mp4" codecs="avc1.4D401E" width="256" height="144" frameRate="11988/500" sar="1:1" startWithSAP="1" bandwidth="43944" FBEncodingTag="dash_v4_256_crf_23_main_3.0_frag_2_video" FBPlaybackResolutionMos="0:100,360:51.2,480:46.7,720:44.2" FBPlaybackResolutionMosConfidenceLevel="high" FBAbrPolicyTags="" FBQualityClass="sd" FBQualityLabel="144p">
+                <BaseURL>http://localhost:17001/static/144.mp4</BaseURL>
+                <SegmentBase indexRangeExact="true" indexRange="956-30963" FBFirstSegmentRange="30964-32859">
+                    <Initialization range="0-955" />
+                </SegmentBase>
+            </Representation>
+            <Representation id="1287246664746504v" mimeType="video/mp4" codecs="avc1.4D401E" width="426" height="240" frameRate="11988/500" sar="1:1" startWithSAP="1" bandwidth="91040" FBEncodingTag="dash_v4_426_crf_23_main_3.0_frag_2_video" FBPlaybackResolutionMos="0:100,360:70.8,480:66.1,720:62.2" FBPlaybackResolutionMosConfidenceLevel="high" FBAbrPolicyTags="" FBQualityClass="sd" FBQualityLabel="240p">
+                <BaseURL>http://localhost:17001/static/240.mp4</BaseURL>
+                <SegmentBase indexRangeExact="true" indexRange="957-30964" FBFirstSegmentRange="30965-32976">
+                    <Initialization range="0-956" />
+                </SegmentBase>
+            </Representation>
+        </AdaptationSet>
+        <AdaptationSet segmentAlignment="true" lang="jpn" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+            <Representation id="446132065930364ad" mimeType="audio/mp4" codecs="mp4a.40.5" audioSamplingRate="48000" startWithSAP="1" bandwidth="65198" FBEncodingTag="dash_audio_aacp_64_frag_2_audio">
+                <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+                <BaseURL>http://localhost:17001/static/audio1.aac</BaseURL>
+                <SegmentBase indexRangeExact="true" indexRange="881-30936" FBFirstSegmentRange="30937-47703">
+                    <Initialization range="0-880" />
+                </SegmentBase>
+            </Representation>
+        </AdaptationSet>
+    </Period>
+</MPD>

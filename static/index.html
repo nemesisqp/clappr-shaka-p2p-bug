@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TEST CACHE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="sixteen wide column" style="padding-top: 80px;">
+    <div id="videoContainer" style="width: 658px; height: 400px"></div>
+    <script src="jquery.min.js"></script>
+
+<!--    <script src="p2p-media-loader-core.js"></script>-->
+<!--    <script src="p2p-media-loader-shaka.js"></script>-->
+
+    <script src="https://cdn.jsdelivr.net/npm/p2p-media-loader-core@0.5.0/build/p2p-media-loader-core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p2p-media-loader-shaka@0.5.0/build/p2p-media-loader-shaka.js"></script>
+
+    <script src="shaka-player.compiled.js"></script>
+    <script src="clappr.plainhtml5.min.js"></script>
+    <script src="dash-shaka-playback.external.min.js"></script>
+    <script src="level-selector.min.js"></script>
+    <script src="p2p-player.js"></script>
+    <script>
+        var playerOptions = {
+            autoPlay: true,
+            sources:  [
+                {
+                    source:   'video.mpd',
+                    mimeType: "application/dash+xml"
+                },5
+            ]
+        };
+
+        var player = new P2pVideoPlayer('#videoContainer', playerOptions);
+        player.init();
+    </script>
+</div>
+<!--<script src="/bundle.min.js"></script>-->
+
+</body>
+</html>
